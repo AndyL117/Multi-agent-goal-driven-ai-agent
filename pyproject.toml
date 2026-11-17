@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "goal-agents"
+version = "0.1.0"
+description = "A small goal-driven multi-agent orchestration framework"
+requires-python = ">=3.11"
+
+[project.scripts]
+goal-agents = "goal_agents.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
